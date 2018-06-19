@@ -21,4 +21,12 @@ Route::get('/games', 'GamesController@show' );
 
 Route::get('/games/{id}', 'GamesController@fetch');
 
-Route::get('/games/edit/{id}', 'GamesController@edit');
+Route::post('/games/edit/{id}', 'GamesController@edit');
+
+Route::post('/games/remove/{id}', 'GamesController@remove');
+
+Route::get('/games/new', 'GamesController@display');
+
+Route::post('/games/save', 'GamesController@store');
+
+Route::get('/games/{id}/reviews', 'ReviewController@getGameReviews');
